@@ -1,0 +1,33 @@
+
+.collapse-table tr.parent-row {
+  cursor: pointer;
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+}
+
+.collapse-table tr.child-row {
+  display: none;
+  background-color: rgba(120, 130, 140, 0.13);
+  //#cfecfe
+}
+
+.collapse-table .parent-row td:after {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  float: right;
+  padding: 3px;
+}
+
+.collapse-table tr.parent-row.active{
+  background-color: #53565d47 !important;
+}

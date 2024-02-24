@@ -1,0 +1,21 @@
+{
+  "name": "anna",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Ratheep <ratheep.ceymplon@jeylabs.com.au>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic": "semantic-ui#^2.3.0",
+    "slidereveal": "^1.1.2"
+  }
+}

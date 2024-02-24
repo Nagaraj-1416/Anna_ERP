@@ -1,0 +1,1 @@
+<a href="{{ $url or '/' }}" class="ui button {{ $classes }}">{{ $text or 'Cancel' }}</a>

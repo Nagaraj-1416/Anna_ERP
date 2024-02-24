@@ -1,0 +1,25 @@
+<tr ng-class="{parent: order.children}" data-column="{{ order.related_column}}" data-id="{{ order.related_id}}" class="{{ order.class }}" ng-init="parentScope = $parent.$parent;">
+    <td class="cell-name">
+        <div ng-click="order.opened = !order.opened" class="indent" style="padding-left: {{15*level}}px"></div>
+        <span ng-click="order.opened = !order.opened" >{{order.summary}}</span>
+    </td>
+    <td width="10%" class="center"><small ng-click="showProducts(order)"><a class="btn btn-xs btn-primary" href="#">Sold Items</a></small></td>
+    <td width="10%" class="text-right text-info" style="cursor: pointer;" ng-click="showOrders(order)">{{order.total_sales | number:2}}</td>
+    <td width="10%" class="text-right">{{order.total_cash | number:2}}</td>
+    <td width="10%" class="text-right">{{order.total_cheque | number:2}}</td>
+    <td width="10%" class="text-right">{{order.total_deposit | number:2}}</td>
+    <td width="10%" class="text-right">{{order.total_card | number:2}}</td>
+    <td width="10%" class="text-right">{{order.total_paid | number:2}}</td>
+    <td width="10%" class="text-right">{{order.total_balance | number:2}}</td>
+</tr>
+<tr class="children" ng-if="order.children">
+    <td colspan="9" class="child-row-table">
+        <p class="pl-3 no-data-info text-danger" ng-if="order.children.length == 0">
+            <code>There are no records found.</code>
+        </p>
+        <table class="table borderless">
+            <tbody ng-class="{opened: order.opened}" ng-include="&#39;/template/tableTree.tpl.html&#39;"
+                   ng-init="level = level + 1" ng-repeat="order in order.children"></tbody>
+        </table>
+    </td>
+</tr>

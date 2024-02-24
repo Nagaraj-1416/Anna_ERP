@@ -1,0 +1,20 @@
+<tr ng-class="{parent: stoke.children}" data-id="{{ stoke.id }}" class="{{ stoke | getClassName }}"
+    data-model="{{ stoke.data_model }}" ng-init="parentScope = $parent.$parent;">
+    <td class="cell-name" ng-click="stoke.opened = !stoke.opened">
+        <div class="indent" style="padding-left: {{15*level}}px"></div>
+        {{stoke.name}}
+    </td>
+    <td width="20%" class="text-left">{{stoke.min_level}}</td>
+    <td width="20%" class="text-left">{{stoke.qty}}</td>
+</tr>
+<tr class="children" ng-if="stoke.children">
+    <td colspan="8" class="child-row-table">
+        <p class="pl-3 no-data-info text-danger" ng-if="stoke.children.length == 0">
+            <small>No records found.</small>
+        </p>
+        <table class="table bstokeless">
+            <tbody ng-class="{opened: stoke.opened}" ng-include="&#39;/template/stokeTableTree.tpl.html&#39;"
+                   ng-init="level = level + 1" ng-repeat="stoke in stoke.children"></tbody>
+        </table>
+    </td>
+</tr>

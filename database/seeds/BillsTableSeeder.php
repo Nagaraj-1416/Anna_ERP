@@ -1,0 +1,186 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class BillsTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $bills = [
+            [
+                'bill_no' => 2143237,
+                'bill_date' => \Carbon\Carbon::now()->subDays(3),
+                'due_date' => \Carbon\Carbon::now()->addDays(3),
+                'amount' => 4000.00,
+                'prepared_by' => 1,
+                'approval_status' => 1,
+                'approved_by' => 1,
+                'status' => 1,
+                'notes' => 'This is bill notes 1.',
+                'purchase_order_id' => 1,
+                'grn_id' => 10,
+                'supplier_id' => 1,
+                'store_id' => 1,
+                'company_id' => 1,
+            ],
+            [
+                'bill_no' => 2143238,
+                'bill_date' => \Carbon\Carbon::now()->subDays(4),
+                'due_date' => \Carbon\Carbon::now()->addDays(6),
+                'amount' => 5000.00,
+                'prepared_by' => 1,
+                'approval_status' => 1,
+                'approved_by' => 1,
+                'status' => 1,
+                'notes' => 'This is bill notes 2.',
+                'purchase_order_id' => 2,
+                'grn_id' => 1,
+                'supplier_id' => 1,
+                'store_id' => 1,
+                'company_id' => 1,
+            ],
+            [
+                'bill_no' => 2143239,
+                'bill_date' => \Carbon\Carbon::now()->subDays(5),
+                'due_date' => \Carbon\Carbon::now()->addDays(8),
+                'amount' => 6000.00,
+                'prepared_by' => 1,
+                'approval_status' => 1,
+                'approved_by' => 1,
+                'status' => 1,
+                'notes' => 'This is bill notes 3.',
+                'purchase_order_id' => 1,
+                'grn_id' => 1,
+                'supplier_id' => 1,
+                'store_id' => 2,
+                'company_id' => 1,
+            ],
+            [
+                'bill_no' => 2143240,
+                'bill_date' => \Carbon\Carbon::now()->subDays(6),
+                'due_date' => \Carbon\Carbon::now()->addDays(9),
+                'amount' => 7000.00,
+                'prepared_by' => 1,
+                'approval_status' => 1,
+                'approved_by' => 1,
+                'status' => 1,
+                'notes' => 'This is bill notes 4.',
+                'purchase_order_id' => 4,
+                'grn_id' => 2,
+                'supplier_id' => 1,
+                'store_id' => 1,
+                'company_id' => 1,
+            ],
+            [
+                'bill_no' => 2143241,
+                'bill_date' => \Carbon\Carbon::now()->subDays(7),
+                'due_date' => \Carbon\Carbon::now()->addDays(10),
+                'amount' => 8000.00,
+                'prepared_by' => 1,
+                'approval_status' => 1,
+                'approved_by' => 1,
+                'status' => 1,
+                'notes' => 'This is bill notes 5.',
+                'purchase_order_id' => 1,
+                'grn_id' => 1,
+                'supplier_id' => 1,
+                'store_id' => 1,
+                'company_id' => 1,
+            ],
+            [
+                'bill_no' => 2143242,
+                'bill_date' => \Carbon\Carbon::now()->subDays(8),
+                'due_date' => \Carbon\Carbon::now()->addDays(11),
+                'amount' => 9000.00,
+                'prepared_by' => 1,
+                'approval_status' => 1,
+                'approved_by' => 1,
+                'status' => 1,
+                'notes' => 'This is bill notes 6.',
+                'purchase_order_id' => 1,
+                'grn_id' => 5,
+                'supplier_id' => 1,
+                'store_id' => 1,
+                'company_id' => 1,
+            ],
+            [
+                'bill_no' => 2143243,
+                'bill_date' => \Carbon\Carbon::now()->subDays(9),
+                'due_date' => \Carbon\Carbon::now()->addDays(12),
+                'amount' => 10000.00,
+                'prepared_by' => 1,
+                'approval_status' => 1,
+                'approved_by' => 1,
+                'status' => 1,
+                'notes' => 'This is bill notes 7.',
+                'purchase_order_id' => 1,
+                'grn_id' => 2,
+                'supplier_id' => 2,
+                'store_id' => 2,
+                'company_id' => 2,
+            ],
+            [
+                'bill_no' => 2143244,
+                'bill_date' => \Carbon\Carbon::now()->subDays(10),
+                'due_date' => \Carbon\Carbon::now()->addDays(13),
+                'amount' => 11000.00,
+                'prepared_by' => 1,
+                'approval_status' => 1,
+                'approved_by' => 1,
+                'status' => 1,
+                'notes' => 'This is bill notes 8.',
+                'purchase_order_id' => 1,
+                'grn_id' => 2,
+                'supplier_id' => 1,
+                'store_id' => 1,
+                'company_id' => 1,
+            ],
+            [
+                'bill_no' => 2143245,
+                'bill_date' => \Carbon\Carbon::now()->subDays(11),
+                'due_date' => \Carbon\Carbon::now()->addDays(14),
+                'amount' => 12000.00,
+                'prepared_by' => 1,
+                'approval_status' => 1,
+                'approved_by' => 1,
+                'status' => 1,
+                'notes' => 'This is bill notes 9.',
+                'purchase_order_id' => 2,
+                'grn_id' => 3,
+                'supplier_id' => 1,
+                'store_id' => 1,
+                'company_id' => 1,
+            ],
+            [
+                'bill_no' => 2143246,
+                'bill_date' => \Carbon\Carbon::now()->subDays(12),
+                'due_date' => \Carbon\Carbon::now()->addDays(15),
+                'amount' => 13000.00,
+                'prepared_by' => 1,
+                'approval_status' => 1,
+                'approved_by' => 1,
+                'status' => 1,
+                'notes' => 'This is bill notes 10.',
+                'purchase_order_id' => 1,
+                'grn_id' => 1,
+                'supplier_id' => 1,
+                'store_id' => 1,
+                'company_id' => 1,
+            ],
+        ];
+        
+
+        $now = \Carbon\Carbon::now();
+        foreach ($bills as $key => $add) {
+            $bills[$key]['created_at'] = $now;
+            $bills[$key]['updated_at'] = $now;
+        }
+
+        \App\Bill::insert($bills);
+    }
+}

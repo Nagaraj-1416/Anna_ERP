@@ -1,0 +1,37 @@
+<tr ng-class="{parent: group.children}" data-id="{{ group.id }}" class="{{ group.class }}"
+    data-model="{{ group.data_model }}" ng-init="parentScope = $parent.$parent;">
+    <td class="cell-name" ng-click="group.opened = !group.opened">
+        <div class="indent" style="padding-left: {{15*level}}px"></div>
+        {{group.name}}
+    </td>
+    <td width="20%">
+        <div ng-if="group.data_model == 'Account'">
+            <a href="#" ng-click="editRowAccount(group.id)" class="btn btn-warning btn-xs">
+                <i class="ti-pencil"></i> Edit
+            </a>
+            <a href="{{ getShowUrl(group.id)}}" target="_blank" class="btn btn-info btn-xs">
+                <i class="ti-eye"></i> View
+            </a>
+            <a ng-if="group.opening_balance == 0" class="text-white btn btn-primary btn-xs opening-button" data-id="@{{ group.id }}">
+                <i class="ti-money"></i>
+                Add Balance
+            </a>
+        </div>
+    </td>
+    <td width="10%" class="text-right">{{group.opening_balance | number:2}}</td>
+    <td width="15%" >{{group.opening_balance_at || 'None'}}</td>
+    <td width="10%" class="text-right">{{group.debit | number:2}}</td>
+    <td width="10%" class="text-right">{{group.credit | number:2}}</td>
+    <td width="10%" class="text-right">{{group.balance | number:2}}</td>
+</tr>
+<tr class="children" ng-if="group.children">
+    <td colspan="8" class="child-row-table">
+        <p class="pl-3 no-data-info text-danger" ng-if="group.children.length == 0">
+            <small>No records found.</small>
+        </p>
+        <table class="table bgroupless">
+            <tbody ng-class="{opened: group.opened}" ng-include="&#39;/template/groupTableTree.tpl.html&#39;"
+                   ng-init="level = level + 1" ng-repeat="group in group.children"></tbody>
+        </table>
+    </td>
+</tr>
